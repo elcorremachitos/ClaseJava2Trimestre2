@@ -20,13 +20,13 @@ public class Main {
         String[] tenList= {
                 "Dieci",
                 "Veinti",
-                "Treinta",
-                "Cuarenta",
-                "Cincuenta",
-                "Sesenta",
-                "Setenta",
-                "Ochenta",
-                "Noventa"
+                "Treintai",
+                "Cuarentai",
+                "Cincuentai",
+                "Sesentai",
+                "Setentai",
+                "Ochentai",
+                "Noventai"
         };
 
         String[] unitsList= {
