@@ -1,11 +1,12 @@
 package Ejercicio4;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String[] countryList = {
+        String[] countryListName = {
                 "Vacio",
                 "Colombia",
                 "Venezuela",
@@ -18,17 +19,36 @@ public class Main {
                 "Uruguay",
                 "Paraguay"
         };
+        String[] countryListUser = {
+                "Vacio",
+                "Colombiano",
+                "Venezolano",
+                "Brasileño",
+                "Ecuatoriano",
+                "Peruano",
+                "Boliviano",
+                "Chileno",
+                "Argentino",
+                "Uruguayo",
+                "Paraguao"
+        };
 
-        String countryName = getCountryCivilitian(countryList, sc);
+        String countryName = getCountryCivilitian(countryListName,countryListUser, sc);
         System.out.println("El sujeto es " + countryName);
 
     }
 
-    private static String getCountryCivilitian(String[] countryList, Scanner sc) {
-        System.out.println("Ingrese el numero del country");
+    private static String getCountryCivilitian(String[] countryListName, String[] countryListUser, Scanner sc) {
         int idCountry = 0;
-        String nationality = "Ninguna";
+        String nationality;
         boolean flag = false;
+
+        System.out.println("Lista de paises: ");
+        for (int i = 0; i < countryListName.length; i++) {
+            System.out.println(i + ". " + countryListUser[i]);
+        }
+        System.out.println("\nIngrese el numero del pais: ");
+
         while (!flag) {
             idCountry = sc.nextInt();
             if (idCountry > 0 && idCountry <= 10) {
@@ -36,38 +56,7 @@ public class Main {
             }
         }
 
-        switch (idCountry) {
-            case 1:
-                nationality = "Colombiano";
-                break;
-            case 2:
-                nationality = "Colombiano";
-                break;
-            case 3:
-                nationality = "Brasileño";
-                break;
-            case 4:
-                nationality = "Ecuatoriano";
-                break;
-            case 5:
-                nationality = "Peruano";
-                break;
-            case 6:
-                nationality = "Boliviano";
-                break;
-            case 7:
-                nationality = "Chileno";
-                break;
-            case 8:
-                nationality = "Argentino";
-                break;
-            case 9:
-                nationality = "Uruguay";
-                break;
-            case 10:
-                nationality = "Paraguayo";
-                break;
-        }
+        nationality = countryListUser[idCountry];
         return nationality;
     }
 }
