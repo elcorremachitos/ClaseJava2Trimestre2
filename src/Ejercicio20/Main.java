@@ -26,6 +26,6 @@ public class Main {
         }
 
         System.out.println("La serie es: " + accumulativeString);
-        System.out.println("El resultado es: " + sum);
+        System.out.println("El resultado es: " + accumulative);
     }
 }

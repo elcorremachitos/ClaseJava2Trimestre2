@@ -44,7 +44,6 @@ public class Main {
 
     private static int getFlowerTotalPrice(int typeFlower, int colorFlower, int quantityFlower, int[] listPrices) {
         // Rosas
-        int total;
         int pricePerFlower = 0;
         if (typeFlower == 1){
             if (colorFlower == 1){
