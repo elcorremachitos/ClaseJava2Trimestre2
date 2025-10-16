@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int list_Prices[] = {
+        int[] list_Prices = {
                 1250, // Flor 1
                 1100, // Flor 2
                 1205, // Flor 3
@@ -58,7 +58,7 @@ public class Main {
             }
         }
         // Claveles
-        if (typeFlower == 2){
+        else if (typeFlower == 2){
             if (colorFlower == 2){
                 if (quantityFlower <= 12){
                     pricePerFlower = listPrices[3];
@@ -69,8 +69,7 @@ public class Main {
                 pricePerFlower = listPrices[5];
             }
         }
-        total = pricePerFlower * quantityFlower;
-        return total;
+        return pricePerFlower * quantityFlower;
     }
 
 }
