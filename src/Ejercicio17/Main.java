@@ -6,26 +6,21 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // No se como hacerlo, esperare a las clases
         System.out.println("Ingresa el numero limite: ");
         int numberLimit = sc.nextInt();
+        System.out.println(numberLimit);
 
-        int accumulative = 0;
-        int counter = 1;
-        String accumulativeString = "";
+        String accumulativeString;
 
-        for (int i = 1; i <= numberLimit; i++) {
-            counter = counter + 1;
-            for (int j = 0; j <= counter; j++) {
-                if(j % 2 != 0) {
-                    accumulative = accumulative + j;
-                    accumulativeString =  accumulativeString + "+" + j;
+        for (int i = 1; i <= numberLimit; i++){
+            accumulativeString = "";
+            for (int j = 0; j <= i*2; j++) {
+                if (j % 2 != 0){
+                    accumulativeString = accumulativeString + "+" + j;
                 }
             }
+            System.out.println(accumulativeString + " = " + i + " al cuadrado (" + i*i + ")");
         }
-
-        System.out.println("La secuencia de numeros es: " + accumulativeString);
-        System.out.println("Y el resultado es: " + accumulative);
 
     }
 }
